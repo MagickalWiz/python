@@ -16,6 +16,6 @@ for i in range(0,8):
 		binString = binString+str(q)
 print("\n*********\t")
 print()
-print(str(n_original)+" base 10 = "+binString+" base 2"
+print(str(n_original)+" base 10 = "+binString+" base 2")
 print("\n*********\t")
 print(bin(int(n_original)))

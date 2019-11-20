@@ -10,10 +10,10 @@ y = (5x^2 + 4x +2)
 def roots(a,b,c):
 	D = (b*b - 4*a*c)
 	print()
-	print("D = " + str(D)
+	print("D = " + str(D))
 	if (D >= 0):  #check for positive D
 		print ("REAL ROOTS")
-		D = D**0,5 # Calculate square root of D
+		D = D**0.5 # Calculate square root of D
 		x1 = (-b + D) / (2*a)
 		x2 = (-b - D)/ (2*a)
 		print ("x1 = "+str(x1)+" x2 = "+str(x2))
