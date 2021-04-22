@@ -25,8 +25,8 @@ def main():
 
 def binsearch(array, w, success):
 	n = len(array)
-	s = 0			#start		p
-	e = n			#end		r
+	s = 0					#start		p
+	e = n					#end		r
 	m = int((e + s) / 2) 	#middle		q
 	
 	while(s <= e):
