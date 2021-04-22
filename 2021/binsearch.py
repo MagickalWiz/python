@@ -9,7 +9,7 @@ def main():
 	success = False
 	count = 1
 	word = ''
-	print("This program searches a list of 1000 words to locate the input. You can input any word, or randomize a string. Randomizing will continue to randomize until it locates a match.")
+	print("This program searches a list of 1000 words to locate the input. You can input any word, or randomize a string. Randomizing will continue to randomize until it locates a match.\n")
 	print("Enter a lowercase word to find. Enter \'1\' to randomize\nWARNING: Randomizing will only create 2-5 letter words")
 	inputword = str(input("Enter word: "))
 
@@ -67,7 +67,7 @@ def binsearchrand(array, w, success):	#for randomizing, it loops and repeats ran
 
 
 def randomizeWord(array, success):	#repeats the creation of randomized words and relaunches the search function
-	count = 1
+	count = 0
 	while(success == False):
 		word = ''
 		for i in range(random.randint(2,5)):
