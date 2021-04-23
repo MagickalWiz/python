@@ -10,7 +10,7 @@ def main():
 	t2.hideturtle()
 	t.speed(100)
 	t2.speed(100)
-	t.screen.bgpic("/home/magickalwiz/Downloads/spongebob-background.png")
+	t.screen.bgpic("/img/spongebob-background.png")
 			
 	draw(t)
 	draw_leg(t)
