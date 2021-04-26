@@ -13,7 +13,7 @@ def main():
 
 
 
-def binsearchrand(array, w, success):
+def binsearchrand(array, w, success, count):
 	n = len(array)
 	s = 0
 	e = n
@@ -29,7 +29,7 @@ def binsearchrand(array, w, success):
 			else:
 				e = m - 1
 				m = int((e + s) / 2)
-	print("not found\n")
+	print("not found - count: " + str(count) + "\n")
 	return False
 
 
@@ -41,7 +41,7 @@ def randomizeWord(array, success):
 			rn = random.randint(97,122)
 			word = word + chr(rn)
 		print(word)
-		success = binsearchrand(array, word, success)
+		success = binsearchrand(array, word, success, count)
 		count = count + 1
 	print("Place in array: " + str(success) + " after " + str(count) + " loops")
 	
