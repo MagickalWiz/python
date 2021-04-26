@@ -7,7 +7,7 @@ def main():
 	success = False
 	count = 1
 	word = ''
-	print("This program searches a list of 10-letter words to locate a randomized selection of letters.\n")
+	begin = input("This program searches a list of 10-letter words to locate a randomized selection of letters. Press \'Enter\' to begin:")
 	randomizeWord(array, success)
 	print("Place in array: " + str(success))
 
