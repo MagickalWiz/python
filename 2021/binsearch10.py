@@ -9,9 +9,13 @@ def main():
 	count = 1
 	word = ''
 	start = datetime.now()
+	end = datetime.now()
 	start_time = start.strftime("%D:%H:%M:")
 	begin = input("This program searches a list of 10-letter words to locate a randomized selection of letters. Press \'Enter\' to begin:")
-	randomizeWord(array, success, start_time)
+	randomizeWord(array, success)
+	end_time = end.strftime("%D:%H:%M:")
+	print("Start date/time: " + str(start_time))
+	print("End date/time: " + str(end_time))
 
 
 
@@ -35,9 +39,8 @@ def binsearchrand(array, w, success, count):
 	return False
 
 
-def randomizeWord(array, success, start_time):
+def randomizeWord(array, success):
 	count = 0
-	end = datetime.now()
 	while(success == False):
 		word = ''
 		for i in range(10):
@@ -47,9 +50,6 @@ def randomizeWord(array, success, start_time):
 		success = binsearchrand(array, word, success, count)
 		count = count + 1
 	print("Place in array: " + str(success) + " after " + str(count) + " loops")
-	end_time = end.strftime("%D:%H:%M:")
-	print("Start date/time: " + str(start_time))
-	print("End date/time: " + str(end_time))
 	
 
 if __name__ == '__main__':
