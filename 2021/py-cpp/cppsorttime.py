@@ -12,15 +12,15 @@ def main():
 	if(wlSize == 1):
 		x = '10000.txt'
 		y = 10000
-		print(x)
+		#print(x)
 	elif(wlSize == 2):
 		x = '20000.txt'
 		y = 20000
-		print(x)
+		#print(x)
 	elif(wlSize == 3):
 		x = '30000.txt'
 		y = 30000
-		print(x)
+		#print(x)
 	else:
 		print("ERROR PLEASE REATTEMPT")
 	
@@ -50,14 +50,16 @@ def oscpp(x,y):
 			print(str(durationM) + ":" + str(durationS) + ":" + str(durationMS))
 			
 		else:
-			errorFunction()
+			filename = "csort" + str(y) + ".cpp"
+			errorFunction(filename)
 		
 	else:
-		errorFunction()
+		errorFunction(x)
 
 
-def errorFunction():
+def errorFunction(filename):
 	print("ERROR FILE DOES NOT EXIST")
+	print("\nPLEASE CONFIRM THAT " + filename + " EXISTS AND IF NOT REDOWNLOAD")
 
 
 if __name__ == "__main__":
