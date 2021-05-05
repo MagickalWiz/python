@@ -11,24 +11,10 @@ def main():
 	count = 1
 	word = ''
 	start = datetime.now()
-	end = datetime.now()
-	start_time = start.strftime("%D:%H:%M:")
-	print("This program searches a list of 1000 words to locate the input. You can input any word, or randomize a string. Randomizing will continue to randomize until it locates a match.\n")
-	print("Enter a lowercase word to find. Enter \'1\' to randomize\nWARNING: Randomizing will only create 2-5 letter words")
+	start_time = start.strftime("%D:%H:%M:%S:")
+	print("This program searches a list of 1000 words to locate the input. The program will create a random string of letters, and continue to randomize until it locates a match.\nPress \'Enter\' to begin")
 	inputword = str(input("Enter word: "))
-
-	if(inputword == "1"):
-		randomizeWord(array, success)	
-
-	else:
-		print(inputword)
-		success = binsearch(array, inputword, success)
-		print("Place in array: " + str(success))
-	
-	end_time = end.strftime("%D:%H:%M:")
-	print("Start date/time: " + str(start_time))
-	print("End date/time: " + str(end_time))
-
+	randomizeWord(array, success, start_time)
 
 
 def binsearch(array, w, success):
@@ -74,11 +60,11 @@ def binsearchrand(array, w, success):	#for randomizing, it loops and repeats ran
 	return False
 
 
-def randomizeWord(array, success):	#repeats the creation of randomized words and relaunches the search function
+def randomizeWord(array, success,start_time):	#repeats the creation of randomized words and relaunches the search function
 	count = 0
 	while(success == False):
 		word = ''
-		for i in range(random.randint(2,5)):
+		for i in range(random.randint(5,8)):
 			rn = random.randint(97,122)
 			word = word + chr(rn)
 			#print(rn) #debug
@@ -87,6 +73,10 @@ def randomizeWord(array, success):	#repeats the creation of randomized words and
 		count = count + 1
 	#print(str(count) + " COUNT") #debug
 	print("Place in array: " + str(success) + " after " + str(count) + " loops")
+	end = datetime.now()
+	end_time = end.strftime("%D:%H:%M:%S:")
+	print("Start date/time: " + str(start_time))
+	print("End date/time: " + str(end_time))
 	
 	
 
