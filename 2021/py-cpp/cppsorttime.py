@@ -60,6 +60,7 @@ def oscpp(x,y):
 def errorFunction(filename):
 	print("ERROR FILE DOES NOT EXIST")
 	print("\nPLEASE CONFIRM THAT " + filename + " EXISTS AND IF NOT REDOWNLOAD")
+	print("\nhttps://github.com/MagickalWiz/python/tree/master/2021/py-cpp")
 
 
 if __name__ == "__main__":
