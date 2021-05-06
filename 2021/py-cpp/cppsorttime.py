@@ -35,9 +35,9 @@ def oscpp(x,y):
 	startMS = start.strftime("%f")
 	if(path.exists(x) == True):
 		#print("File exists, continuing with program")
-		if(path.exists("csort" + str(y) + ".cpp") == True):
-			os.system("g++ csort" + str(y) + ".cpp -o csort.o")
-			os.system("./csort.o")
+		if(path.exists("csort.cpp") == True):
+			os.system("g++ csort.cpp -o csort.o")
+			os.system("./csort.o " + str(y))
 			end = datetime.now()
 			endM = end.strftime("%M")
 			endS = end.strftime("%S")
