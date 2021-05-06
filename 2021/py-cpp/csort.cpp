@@ -1,4 +1,4 @@
-//CODE CREATED BY CWC
+//CODE CREATED BY CWC MODIFIED BY MAGICKALWIZ
 
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char** argv)
 {
 	int i;
-	const int arraylength = 10000;	
+	const int arraylength = stoi(argv[1]);	
 	string wordlist[arraylength];
 	string wordlistlen = argv[1];
 	ifstream filename(wordlistlen + ".txt");
