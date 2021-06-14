@@ -13,14 +13,13 @@ def drawRect(t,x,y,count):
 	t.right(90)
 	t.forward(y)
 	print(str(endNum) + '  -  ' + str(count))
-	if(count != endNum):
+	if(count <= 25):
 		t.right(random.randint(10,90))
 		x = x + random.randint(1,10)
 		y = y + random.randint(1,5)
 		randCol(t)
-		drawRect(t,x,y,count = random.randint(0,25))
-	else:
-		print("DONE")
+		drawRect(t,x,y,count = count + 1)
+	t.circle(x)
 
 def randCol(t):
 	randcolor = "#" + "%06x" % random.randint(0, 0xFFFFFF)
